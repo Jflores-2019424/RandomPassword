@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: slateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: block;
+    position: relative;
+    background-color: skyblue;
+    padding: 2vh;
+    justify-content: center;
+    align-items: center;
+    width: 40vh;
+    height: 35vh;
+}
+
+.container h2{
+    text-align: center;
+}
+
+.container input{
+    position: absolute;
+    right: 1vh;
+}
+
+.elements{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.number{
+    width: 10vh;
+}
