@@ -6,6 +6,7 @@ const lowerH = document.getElementById("lower")
 const numberH = document.getElementById("number")
 const symbolsH = document.getElementById("symbols")
 const generateH = document.getElementById("generate")
+const deleteH = document.getElementById("delete")
 
 function getRandomUpper(){
     const uppercase = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
@@ -77,5 +78,8 @@ copyH.addEventListener("click", ()=>{
     document.execCommand("copy")
     text.remove()
     alert("Contraseña copiada")
+})
+
+deleteH.addEventListener("click", () =>{
     resultH.innerText = ""
 })

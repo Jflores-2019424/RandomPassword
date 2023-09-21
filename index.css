@@ -60,8 +60,9 @@ body{
     background-color: rgb(45, 45, 156);
     border: none;
     bottom: 3vh;
-    width: 35vh;
+    width: 30vh;
     height: 5vh;
+    right: 1vh;
 }
 
 .button:active{
@@ -70,10 +71,25 @@ body{
 
 .button p{
     margin: 0;
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: bold;
     color: white;
     cursor: pointer;
+}
+
+.delete{
+    position: absolute;
+    background-color: rgb(156, 45, 45);
+    cursor: pointer;
+    border: none;
+    bottom: 3vh;
+    width: 5vh;
+    height: 5vh;
+    left: 3vh;
+}
+
+.delete:active{
+    transform: scale(0.99);
 }
 
 .copy{
