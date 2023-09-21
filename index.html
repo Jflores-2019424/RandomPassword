@@ -9,32 +9,35 @@
 <body>
     <div class="container">
             <h2>Password Generator</h2>
-            <div>
-                
-                <button>
-                    C
+            <div class="result">
+                    contraseña
+                <button id="copy" class="copy">
+                    <img src="images/copy.png">
                 </button>
             </div>
         <div  class="elements">
             <label>Largo</label>
-            <input class="number" value="20" type="number">
+            <input id="length" class="number" value="20" type="number">
         </div>
         <div  class="elements">
             <label>Incluye letras mayusculas</label>
-            <input type="checkbox">
+            <input id="upper" type="checkbox" checked>
         </div>    
         <div  class="elements">
             <label>Incluye letras minusculas</label>
-            <input type="checkbox">
+            <input id="lower" type="checkbox" checked>
         </div>
         <div  class="elements">
             <label>Incluye numeros</label>
-            <input type="checkbox">
+            <input id="number" type="checkbox" checked>
         </div>
         <div  class="elements">
             <label>Incluye simbolos</label>
-            <input type="checkbox">
+            <input id="symbols" type="checkbox" checked>
         </div>
+        <button id="generate" class="button">
+            <p>Crear contraseña</p>
+        </button>
     </div>
 </body>
 <script src="index.js"></script>
