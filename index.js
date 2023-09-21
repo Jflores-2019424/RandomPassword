@@ -33,3 +33,49 @@ const random = {
     number: getRandomNumber,
     symbols: getRandomSymbol
 }
+
+generateH.addEventListener('click', ()=>{
+    const length = +lengthH.value
+    const ifUpper = upperH.checked
+    const ifLower = lowerH.checked
+    const ifNumber = numberH.checked
+    const ifSymbol = symbolsH.checked
+
+    resultH.innerText = generatePassword(ifUpper, ifLower, ifNumber, ifSymbol, length)
+})
+
+function generatePassword(upper, lower, number, symbols, length){
+    let generatePassword = ""
+    const types = upper + lower + number + symbols
+    const arrTypes = [{upper}, {lower}, {number}, {symbols}].filter(item => Object.values(item)[0])
+
+    if(types == 0){
+        return ""
+    }
+
+    for(let i = 0; i < length; i += types){
+        arrTypes.forEach(type => {
+            const func = Object.keys(type)[0]
+            generatePassword += random[func]()
+        })
+    }
+
+    const password = generatePassword.slice(0, length)
+
+    return password
+}
+
+copyH.addEventListener("click", ()=>{
+    const text = document.createElement("textarea")
+    const password = resultH.innerText
+
+    if(!password){return}
+
+    text.value = password
+    document.body.appendChild(text)
+    text.select()
+    document.execCommand("copy")
+    text.remove()
+    alert("Contraseña copiada")
+    resultH.innerText = ""
+})
